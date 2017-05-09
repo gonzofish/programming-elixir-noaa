@@ -33,9 +33,11 @@ defmodule Noaa.Printer do
 
   defp _print_attributes(elements, attributes) do
     padding = (Enum.map(attributes, fn({ label, _ }) -> String.length(label) end)
-      |> Enum.max) + 1
+      |> Enum.max) + 2
     Enum.each(attributes, fn({ label, field }) ->
-      IO.puts String.pad_leading(label, padding) <> " " <>
+      IO.puts " " <>
+        String.pad_trailing(label, padding) <>
+        " " <>
         elements[String.to_atom(field)].text
     end)
   end
