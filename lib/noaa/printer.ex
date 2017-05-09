@@ -26,7 +26,7 @@ defmodule Noaa.Printer do
   defp _get_header(elements) do
     IO.puts ""
     IO.puts " #{ elements.location.text }"
-    IO.puts " elements.station_id.text }"
+    IO.puts " #{ elements.station_id.text }"
     IO.puts " #{ elements.latitude.text }, #{ elements.longitude.text }"
     IO.puts ""
   end
