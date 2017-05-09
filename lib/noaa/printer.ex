@@ -6,7 +6,6 @@ defmodule Noaa.Printer do
     { "Dewpoint", "dewpoint_string" },
     { "Relative Humidity (%)", "relative_humidity" },
     { "Wind", "wind_string" },
-    { "Wind Chill", "windchill_string" },
     { "Visibility (mi.)", "visibility_mi" },
     { "Altimeter (in. Hg)", "pressure_in" }
   ]
