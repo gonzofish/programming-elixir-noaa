@@ -25,7 +25,7 @@ defmodule Noaa.Parser do
       Tuple.to_list(child) |> get_xml_info(acc)
     end)
 
-    Map.put(parent_info, :children, current_children ++ [Map.put(node_info, :tag_name, to_string(tag_name))])
+    Map.put(parent_info, :children, current_children ++ [Map.put(node_info, :tag_name, tag_name)])
   end
 
   def get_xml_info([:xmlText | attributes ], parent_info) do
